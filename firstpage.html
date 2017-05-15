@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>heqianyu's_demo</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/firststyle.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("a").mouseover(function(event){
+				$(this).css("background-color","#9CCDD9").animate({opacity:"0.6"},200);
+				event.stopPropagation();
+				}).mouseout(function(event){
+				$(this).css("background-color","#FFF").animate({opacity:"1"},200);
+				event.stopPropagation();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">
+				<h2>demo列表</h2>
+			<div class="fixedWidth">
+				<div id="topblank"></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="fixedWidth">
+				<ul>
+					<li><a href="http://heqianyu.github.io/bella/issacBella.html">1.效果</a></li>
+					<li><a href="#">2.效果</a></li>
+					<li><a href="#">3.效果</a></li>
+					<li><a href="#">4.效果</a></li>
+					<li><a href="#">5.效果</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="fixedWidth">
+				<p>见笑，谢谢观看！</p>
+			</div>
+		</div>
+	</body>
+</html>
