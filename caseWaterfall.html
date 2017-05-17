@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html{min-width: 250px;}
+			.main{position: relative;}
+			.pic{padding: 10px 0 0 10px;float: left;}
+			.pic img{width: 200px;height:auto;padding: 10px;border: 1px solid #CCC;border-radius: 5px;box-shadow: 0 0 5px #CCC;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			//1.高度很小，会重合(解决)2.位置可能为负数3.当页面缩小后，第一排就再也回不去了(解决,一次性解决1、3，通过重置小于列数的盒子属性)
+			$(function(){
+				waterFall();
+				function waterFall(){
+				$haar=[];
+				var $boxs=$(".main>div");
+				var w=$boxs.eq(0).outerWidth();
+				var column=Math.floor($(window).width()/w);
+				$(".main").width(column*w).css('margin','0 auto');
+				$boxs.each(function(index,element){
+					var h=$boxs.eq(index).outerHeight();
+					if(index<column){
+						$haar[index]=h;
+						$(element).css({'position':'','top':'','left':''});
+					}else{
+						var minH=Math.min.apply(null,$haar);
+						var minIndex=$.inArray(minH,$haar);
+						$(element).css({'position':'absolute','top':minH+'px','left':minIndex*w+'px'});
+						//alert(minH);
+						$haar[minIndex]=minH+$(element).outerHeight();
+					}
+				})
+				}
+				$(window).on("resize",function(){waterFall()})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="pic"><img src="img/nicokids/1.jpg"/></div>
+			<div class="pic"><img src="img/handpainting/8.jpg"/></div>
+			<div class="pic"><img src="img/nicokids/2.jpg"/></div>
+			<div class="pic"><img src="img/spring/p3_title.png"/></div>
+			<div class="pic"><img src="img/nicokids/5.jpg"/></div>
+			<div class="pic"><img src="img/nicokids/3.jpg"/></div>
+			<div class="pic"><img src="img/handpainting/2.jpg"/></div>
+			<div class="pic"><img src="img/nicokids/6.jpg"/></div>
+			<div class="pic"><img src="img/nicokids/4.jpg"/></div>
+		</div>
+	</body>
+</html>
