@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html{min-width: 250px;}
+			.main{position: relative;}
+			.pic{padding: 10px 0 0 10px;float: left;}
+			.pic img{width: 200px;min-height:200px;padding: 10px;border: 1px solid #CCC;border-radius: 5px;box-shadow: 0 0 5px #CCC;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				waterFall();
+				var dataSrc={'data':[{'src':'1.jpg'},{'src':'2.jpg'},{'src':'3.jpg'},{'src':'4.jpg'},{'src':'5.jpg'},{'src':'6.jpg'},{'src':'7.jpg'},
+									{'src':'8.jpg'},{'src':'9.jpg'},{'src':'10.jpg'},{'src':'11.jpg'},{'src':'12.jpg'},{'src':'13.jpg'},{'src':'1.jpg'},{'src':'2.jpg'},
+									{'src':'3.jpg'},{'src':'4.jpg'},{'src':'5.jpg'},{'src':'6.jpg'},{'src':'7.jpg'},{'src':'8.jpg'},{'src':'9.jpg'},{'src':'10.jpg'},
+									{'src':'11.jpg'},{'src':'12.jpg'},{'src':'13.jpg'}]};
+									
+//				外部引入json并如何获取内容,不会!!!,真不会啊！！！求教！！！
+
+				if($(document).height()==$(window).height()){
+					$.each(dataSrc.data, function(index,value) {
+						var $addbox=$('<div>').addClass('pic').appendTo(".main");
+						$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+						if($(document).height()>$(window).height()){return false;};
+					});
+					waterFall();
+				}
+				window.onscroll=function(){
+					if($(document).scrollTop()<$(window).height()*0.2){
+						$.each(dataSrc.data, function(index,value) {
+							var $addbox=$('<div>').addClass('pic').appendTo(".main");
+							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							if(index>8){return false;}
+						});
+						waterFall();
+					}else if($(document).height()<9000){
+						$.each(dataSrc.data, function(index,value) {
+							var $addbox=$('<div>').addClass('pic').appendTo(".main");
+							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							if(index>8){return false;}
+						});
+						waterFall();
+					}else if($(document).scrollTop()>$(document).height()*0.85){
+						$.each(dataSrc.data, function(index,value) {
+							var $addbox=$('<div>').addClass('pic').appendTo(".main");
+							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							if(index>8){return false;};
+						});
+						waterFall();
+					}
+				};
+				function waterFall(){
+				$h_arr=[];
+				var $boxs=$(".main>div");
+				var w=$boxs.eq(0).outerWidth();
+				var column=Math.floor($(window).width()/w);
+				$(".main").width(column*w).css('margin','0 auto');
+				$boxs.each(function(index,element){
+					if(index<column){
+						$h_arr[index]=$(element).outerHeight();
+						$(element).css({'position':'','top':'','left':''});
+					}else{
+						var minH=Math.min.apply(null,$h_arr);
+						var minIndex=$.inArray(minH,$h_arr);
+						$(element).css({'position':'absolute','top':minH+'px','left':minIndex*w+'px'});
+						$h_arr[minIndex]+=$(element).outerHeight();
+					}
+				})
+				};
+				$(window).on("resize",function(){waterFall()});
+			})
+		</script>
+	</head>
+	<body>
+		<div style="position: fixed;top:0;left: 0;z-index: 100;">
+			<input type="text" name="update" id="update" value="" />
+			<input type="button" id="anniu" value="查询" />
+		</div>
+		<div class="main">
+			<div class="pic"><img src="img/1.jpg"/></div>
+			<div class="pic"><img src="img/2.jpg"/></div>
+			<div class="pic"><img src="img/3.jpg"/></div>
+			<div class="pic"><img src="img/4.jpg"/></div>
+			<div class="pic"><img src="img/5.jpg"/></div>
+			<div class="pic"><img src="img/6.jpg"/></div>
+		</div>
+		<script type="text/javascript">
+			$("#anniu").click(function(){
+				$("#update").val($(window).height()+','+$(document).height()+','+$(document).scrollTop())
+			})
+		</script>
+	</body>
+</html>

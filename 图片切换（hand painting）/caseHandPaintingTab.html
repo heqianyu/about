@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>girlsPic</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			li{list-style: none;}
+			.girlsPic{width: 600px;height:600px;overflow: hidden;margin-left: auto;margin-right: auto;margin-top: 50px;position: relative;}
+			.girlsPic ul{width: 100%;height: 100%;position: relative;}
+			.girlsPic li{position: absolute;top: 0;left: 0;width: 100%;height:100%;}
+			.hide{display: none;}
+			.girlsPic img{width: 100%;height: 100%;background-size: 100%;}
+			.turnLeft{position: absolute;width: 50%;height:100%;left: 0;top: 0;background: plum;opacity: 0;}
+			.turnLeft:hover{opacity: .1;}
+			.turnRight{position: absolute;width: 50%;height:100%;right: 0;top: 0;background: plum;opacity: 0;}
+			.turnRight:hover{opacity: .1;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){ i=0;
+			$(".turnRight").click(function(){if(i>=7){
+				i=0;$(".girlsPic li").eq(7).fadeOut();$(".girlsPic li").eq(i).fadeIn();
+			}else{
+				$(".girlsPic li").eq(i).fadeOut();
+				i++;
+				$(".girlsPic li").eq(i).fadeIn();}
+			});
+			$(".turnLeft").click(function(){if(i<=0){
+				$(".girlsPic li").eq(0).fadeOut();i=7;$(".girlsPic li").eq(i).fadeIn();
+			}else{
+				$(".girlsPic li").eq(i).fadeOut();
+				i--;
+				$(".girlsPic li").eq(i).fadeIn();}
+			})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="girlsPic">
+			<ul class="girlsUl">
+				<li><img src="handpainting/1.jpg"/></li>
+				<li class="hide"><img src="handpainting/2.jpg"/></li>
+				<li class="hide"><img src="handpainting/3.jpg"/></li>
+				<li class="hide"><img src="handpainting/4.jpg"/></li>
+				<li class="hide"><img src="handpainting/5.jpg"/></li>
+				<li class="hide"><img src="handpainting/6.jpg"/></li>
+				<li class="hide"><img src="handpainting/7.jpg"/></li>
+				<li class="hide"><img src="handpainting/8.jpg"/></li>
+			</ul>
+			<div class="turnLeft"></div>
+			<div class="turnRight"></div>
+		</div>
+	</body>
+</html>

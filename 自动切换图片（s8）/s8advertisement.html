@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{padding: 0;margin: 0;font-size: 14px;line-height: 14px;}
+			.go{width:900px;margin:0 auto;}
+			.wrap{width: 900px;height: 520px;overflow: hidden;position: relative;}
+			ul{width:3600px;height: 520px;position: absolute;left: 0px;top: 0;}
+			li{list-style: none;float: left;}
+			img{width: 900px;height: 520px;}
+			.pros{width: 900px;height:25px;overflow: hidden;position: relative;bottom: 20px;}
+			.pro{width: 225px;height:25px;float: left;}
+			.pro:hover{opacity: .8;cursor: pointer;}
+			.pro1 .sub{background: #c69;}
+			.pro1 .process{background: #909;}
+			.pro2 .sub{background: #9fc;}
+			.pro2 .process{background: #396;}
+			.pro3 .sub{background: #fc9;}
+			.pro3 .process{background: #f90;}
+			.pro4 .sub{background: #20B2AA;}
+			.pro4 .process{background: #069;}
+			.sub{position: relative;width: 225px;height: 5px;bottom: -20px;}
+			.process{width:0;height: 5px;position:relative;bottom: 0;position: absolute;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				
+				//5.27 我想实现用.sub多的高度，点击停止所有动画，然后跳转到当前index的图片，当前progress立即读条，五秒钟之后继续翻页。然而，好沮丧！
+				
+				
+				var page=0;
+				var pros=$(".pro");
+				function picMove(){
+					var nowpage=page;
+					$(".process").eq(page).animate({width:"225px"},5000).addClass("colorful");
+					if(page>=3){
+						$(".colorful").css("width",0);
+						$(".ul").delay(5000).animate({left:0},1000);page=0;
+					}else{
+						$(".colorful").css("width",0);
+						$(".ul").delay(5000).animate({left:'-='+900},1000);page++;
+					};
+				}
+				picMove();
+				var intervalImg=setInterval(picMove,"6000");
+			})
+		</script>
+	</head>
+	<body>
+		<div class="go">
+			<div class="wrap">
+				<ul class="ul">
+					<li><img src="img/1.jpg"/></li>
+					<li><img src="img/2.jpg"/></li>
+					<li><img src="img/3.jpg"/></li>
+					<li><img src="img/4.jpg"/></li>
+				</ul>
+			</div>
+			<div class="pros">
+				<div class="pro1 pro">
+					<div class="sub"></div>
+					<div class="process"></div>
+				</div>
+				<div class="pro2 pro">
+					<div class="sub"></div>
+					<div class="process"></div>
+				</div>
+				<div class="pro3 pro">
+					<div class="sub"></div>
+					<div class="process"></div>
+				</div>
+				<div class="pro4 pro">
+					<div class="sub"></div>
+					<div class="process"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>
