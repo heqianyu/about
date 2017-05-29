@@ -24,7 +24,7 @@
 				if($(document).height()==$(window).height()){
 					$.each(dataSrc.data, function(index,value) {
 						var $addbox=$('<div>').addClass('pic').appendTo(".main");
-						$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+						$('<img>').attr('src','./waterfall/'+$(value).attr('src')).appendTo($addbox);
 						if($(document).height()>$(window).height()){return false;};
 					});
 					waterFall();
@@ -33,21 +33,21 @@
 					if($(document).scrollTop()<$(window).height()*0.2){
 						$.each(dataSrc.data, function(index,value) {
 							var $addbox=$('<div>').addClass('pic').appendTo(".main");
-							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							$('<img>').attr('src','./waterfall/'+$(value).attr('src')).appendTo($addbox);
 							if(index>8){return false;}
 						});
 						waterFall();
 					}else if($(document).height()<9000){
 						$.each(dataSrc.data, function(index,value) {
 							var $addbox=$('<div>').addClass('pic').appendTo(".main");
-							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							$('<img>').attr('src','./waterfall/'+$(value).attr('src')).appendTo($addbox);
 							if(index>8){return false;}
 						});
 						waterFall();
 					}else if($(document).scrollTop()>$(document).height()*0.85){
 						$.each(dataSrc.data, function(index,value) {
 							var $addbox=$('<div>').addClass('pic').appendTo(".main");
-							$('<img>').attr('src','./img/'+$(value).attr('src')).appendTo($addbox);
+							$('<img>').attr('src','./waterfall/'+$(value).attr('src')).appendTo($addbox);
 							if(index>8){return false;};
 						});
 						waterFall();
@@ -81,12 +81,12 @@
 			<input type="button" id="anniu" value="查询" />
 		</div>
 		<div class="main">
-			<div class="pic"><img src="img/1.jpg"/></div>
-			<div class="pic"><img src="img/2.jpg"/></div>
-			<div class="pic"><img src="img/3.jpg"/></div>
-			<div class="pic"><img src="img/4.jpg"/></div>
-			<div class="pic"><img src="img/5.jpg"/></div>
-			<div class="pic"><img src="img/6.jpg"/></div>
+			<div class="pic"><img src="waterfall/1.jpg"/></div>
+			<div class="pic"><img src="waterfall/2.jpg"/></div>
+			<div class="pic"><img src="waterfall/3.jpg"/></div>
+			<div class="pic"><img src="waterfall/4.jpg"/></div>
+			<div class="pic"><img src="waterfall/5.jpg"/></div>
+			<div class="pic"><img src="waterfall/6.jpg"/></div>
 		</div>
 		<script type="text/javascript">
 			$("#anniu").click(function(){
