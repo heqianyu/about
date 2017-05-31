@@ -3,12 +3,36 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>heqianyu's_demo</title>
-		<link rel="stylesheet" type="text/css" href="firstPage/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="firstPage/css/firststyle.css"/>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			li{list-style: none;}
+			a{text-decoration: none;color: #656565;}
+			/*顶层*/
+			html{width: 100%;}
+			body{width: 100%;height: 100%;background:#fff;font-size: 12px;font-family: "微软雅黑","microsoft yahei";}
+			.fixedWidth{width:1000px;margin: 0 auto;}
+			/*header*/
+			.header h2{width:100%;height: 50px;line-height: 50px;position: fixed;top: 0;left: 0;text-indent:2em;background: #9ccdd9;}
+			.header a{font-size: 14px;color: #FFF;}
+			#topblank{width: 100%;height: 50px;}
+			/*main*/
+			.main{background:#fff;}
+			.main .title{text-align: center;width:1000px;height: 60px;line-height: 60px;font-size: 18px;border-bottom: 1px solid #9CCDD9;display: inline-block;}
+			.main .title:hover{opacity: .8;background: #9ccdd9;cursor: pointer;font-size: 22px;text-indent: 30px;border-radius: 5px;}
+			.main .none{display: none;}
+			.main a{text-align: center;width:1000px;height: 60px;line-height: 60px;font-size: 16px;border-bottom: 1px solid #9CCDD9;font-size: 20px;display: inline-block;}
+			.main a:hover{opacity: .8;background: #9ccdd9;}
+			/*footer*/
+			.footer{width:100%;height: 30px;position: absolute;bottom: 0;left: 0;background: #9ccdd9;}
+			.footer p{height: 30px;line-height: 30px;text-align: center;}
+
+		</style>
 		<script src="jquery-3.2.1.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				
+				$(".title").on("click",function(e){
+					$(this).next().slideToggle()
+				})
 			})
 		</script>
 	</head>
@@ -21,31 +45,40 @@
 		</div>
 		<div class="main">
 			<div class="fixedWidth">
-				<ul>
-					<li>1.慕课网电商网站</li>
-					<ul>
+				<div>
+					<h1 class="title" data-id = "a">图片轮播</h1>
+					<ul class="menu none" id="a">
+						<li><a href="https://heqianyu.github.io/demo/caseHandPaintingTab.html">水平滚动</a></li>
+						<li><a href="https://heqianyu.github.io/demo/caseKidsTab.html">带页码滚动</a></li>
+						<li><a href="https://heqianyu.github.io/demo/s8advertisement.html">待进度条滚动（无页码版）</a></li>
+					</ul>
+				</div>
+				<div>
+					<h1 class="title" data-id = "b">慕课网电商网站</h1>
+					<ul class="menu none" id="b">
 						<li><a href="https://heqianyu.github.io/demo/caseImoocMall.html">慕课网商城主页面</a></li>
 						<li><a href="https://heqianyu.github.io/demo/caseImoocSubMenu.html">慕课网商城二级板块</a></li>
 						<li><a href="https://heqianyu.github.io/demo/caseImoocFilter.html">慕课网商城筛选页面</a></li>
 						<li><a href="https://heqianyu.github.io/demo/caseImoocDetail.html">慕课网商城详情（超简）页面</a></li>
 					</ul>
-					<li>2.图片轮播</li>
-					<ul>
-						<li><a href="https://heqianyu.github.io/demo/caseHandPaintingTab.html">水平滚动</a></li>
-						<li><a href="https://heqianyu.github.io/demo/caseKidsTab.html">带页码滚动</a></li>
-						<li><a href="https://heqianyu.github.io/demo/s8advertisement.html">待进度条滚动（无页码版）</a></li>
-					</ul>
-					<li>3.网站类型</li>
-					<ul>
+				</div>
+				<div>
+					<h1 class="title" data-id = "c">网站类型</h1>
+					<ul class="menu none" id="c">
 						<li><a href="https://heqianyu.github.io/demo/caseWaterfall.html">瀑布流</a></li>
 					</ul>
-					<li>4.移动端示例</li>
-					<ul>
+				</div>
+				<div>
+					<h1 class="title" data-id = "d">移动端示例</h1>
+					<ul class="menu none" id="d">
 						<li><a href="https://heqianyu.github.io/demo/caseImoocSpring.html">慕课贺春</a></li>
 					</ul>
-					<li>5.效果</li>
-				</ul>
-			</div>
+				</div>	
+				<div>
+					<h1 class="title" data-id = "e">效果</h1>
+					<ul class="menu none" id="e"></ul>
+				</div>	
+			</div>	
 		</div>
 		<div class="footer">
 			<div class="fixedWidth">
