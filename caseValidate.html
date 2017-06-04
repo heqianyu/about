@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrap{border: 1px solid cornflowerblue;width:300px;padding-bottom: 20px;margin: 0 auto;}
+			h2{text-align: center;}
+		</style>
+		<script src="jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function checkUserName(){
+				var username=$("[name=username]");
+				var unameValue=username.val();
+				var userMsg=$("#userMsg");
+				if(unameValue==""){
+					userMsg.html("用户名不能为空！");
+					return false;
+				}
+				userMsg.html('');
+				return true;
+			};
+			function checkPassword(){
+				var psw=$("[name=password]").val();
+				var pswMsg=$("#pswMsg");
+				if(psw==""){
+					pswMsg.html("密码不能为空！");
+					return false;
+				}
+				
+				if(psw.length<6||psw.length>12){
+					pswMsg.html("密码长度要保证在6-12位之间！");
+					return false;
+				}
+				
+				pswMsg.html('');
+				return true;
+			};
+			function checkEmail(){
+				var email=$("[name=emailadress]").val();
+				var reg=/^\w+(\.\w+)*@\w+(\.\w+)*$/;
+				var result=reg.test(email);
+				if(!result){
+					$("#emailMsg").html("邮件不合法！");
+					return false;
+				}
+				$("#emailMsg").html('');
+				return true;
+			}
+			$(function(){
+				var username=$("[name=username]");
+				username.blur(function(){
+					checkUserName();
+				});
+				var psw=$("[name=password]");
+				psw.blur(function(){
+					checkPassword();
+				});
+				var email=$("[name=emailadress]");
+				email.blur(function(){
+					checkEmail();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<h2>正则验证表单</h2>
+			&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input type="text" name="username" id="username"/><span id="userMsg"></span>
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password"/><span id="pswMsg"></span>
+			<br />
+			预留邮箱：<input type="text" name="emailadress" id="emailadress"/><span id="emailMsg"></span>
+			<input type="button" id="submit" value="提交" />
+		</div>
+	</body>
+</html>
