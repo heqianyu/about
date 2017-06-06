@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tab组件</title>
+		<style type="text/css">
+			html,body,div,ul,li,a,p,span{margin: 0;padding: 0;}
+			body{font-family: "微软雅黑" "microsoft yahei";}
+			.tab{margin:0 auto;border: 1px solid #CCC;width: 400px;height:290px;border-radius: 3px;position: relative;}
+			li{list-style: none;float: left;width: 100px;height:25px;background: #CCC;text-align: center;}
+			li a{display:inline-block;text-decoration: none;color: #FFF;}
+			li.actived{background: #FFF;}
+			li.actived a{color: #CCC;}
+			img{width:390px;height:260px;position: absolute;left:5px;top:25px;}
+			.content_item{display: none;}
+			.current{display: block;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="tabJquery/tabJquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="js-tab tab" data-config='{
+											"triggerType":"click",
+											"effect":"fate",
+											"invoke":1,
+											"auto":1000}'>
+			<ul class="tab_nav">
+				<li class="actived"><a href="javascript:void(0);">醪糟汤圆</a></li>
+				<li><a href="#">甜烧白</a></li>
+				<li><a href="#">咸烧白</a></li>
+				<li><a href="#">鱼香肉丝</a></li>
+			</ul>
+			<div class="content_wrap">
+				<div class="content_item current"><img src="tabJquery/1.jpg"/></div>
+				<div class="content_item"><img src="tabJquery/2.jpg"/></div>
+				<div class="content_item"><img src="tabJquery/3.jpg"/></div>
+				<div class="content_item"><img src="tabJquery/4.jpg"/></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var tab1=new Tab($(".js-tab").eq(0));
+			});
+		</script>
+	</body>
+</html>
