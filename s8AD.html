@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>galaxyBoom8特效版</title>
+		<style>
+			*{padding: 0;margin: 0;font-size: 14px;line-height: 14px;}
+			.go{width:900px;margin:0 auto;}
+			.wrap{width: 900px;height: 520px;overflow: hidden;position: relative;}
+			img{width: 900px;height: 520px;display: none;}
+			.current{display: block;}
+			.active{opacity: .1;}
+			.pros{width: 900px;height:20px;overflow: hidden;position: relative;bottom: 20px;}
+			.pro{width: 225px;height:20px;float: left;}
+			.pro:hover{cursor: pointer;}
+			.pro1{background: #c69;}
+			.pro1 .process{background: #909;}
+			.pro2{background: #9fc;}
+			.pro2 .process{background: #396;}
+			.pro3{background: #fc9;}
+			.pro3 .process{background: #f90;}
+			.pro4{background: #20B2AA;}
+			.pro4 .process{background: #069;}
+			.process{width:0px;height: 20px;position:relative;bottom: 0px;position: absolute;}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="s8ad/s8AD.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="go" data-config='{
+									"triggerType":"click",
+									"effect":"fade",
+									"invoke":1,
+									"auto":3000}'>
+			<div class="wrap">
+				<img src="s8ad/1.jpg" class="current"/>
+				<img src="s8ad/2.JPG"/>
+				<img src="s8ad/3.JPG"/>
+				<img src="s8ad/4.JPG"/>
+			</div>
+			<div class="pros">
+				<div class="pro1 pro">
+					<div class="process active"></div>
+				</div>
+				<div class="pro2 pro">
+					<div class="process"></div>
+				</div>
+				<div class="pro3 pro">
+					<div class="process"></div>
+				</div>
+				<div class="pro4 pro">
+					<div class="process"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var tab1=new Tab($(".go"));
+			});
+		</script>
+	</body>
+</html>
