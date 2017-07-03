@@ -5,7 +5,7 @@
 		this.tabPic=this.tab.find("div.wrap img");
 		this.tabBtn=this.tab.find("div.pros .pro");//sub的next就是进度条
 		this.config={
-						"triggerType":"mouseover",
+						"triggerType":"click",
 						"effect":"fade",
 						"invoke":1,
 						"auto":3000

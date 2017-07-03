@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>视频列表</title>
+		<style type="text/css">
+			body,div,p,ul,li,img{padding: 0;margin: 0;}
+			body{font:14px/20px "microsoft yahei"}
+			.vWrap{width: 930px;height:264px;border: 1px dotted #CCC;padding: 10px;}
+			.vMain{width:930px;overflow: hidden;position: relative;}
+			.vWrap ul{width: 3960px;height:242px;position: relative;}
+			.vWrap li{list-style: none;float: left;margin-left: 10px;height: 242px;display:none;}
+			.vWrap img{width:300px;height: 200px;border: 1px solid #CCC;vertical-align: bottom;}
+			.vWrap img:hover{border: 1px solid pink;}
+			.vBtn span{}
+			.vPrev{width:50px;height:50px;background: url(Mall/img/back.png) no-repeat;background-size: 100%;position: absolute;left:0;top: 75px;}
+			.vPrev:hover{opacity: .5;cursor: pointer;}
+			.vNext{width:50px;height:50px;background: url(Mall/img/more.png) no-repeat;background-size: 100%;position: absolute;right:0;top: 75px;}
+			.vNext:hover{opacity: .5;cursor: pointer;}
+			.vWrap ul li.show{display: block;}
+		</style>
+		<script src="jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="javascript/videoTab.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--实际952*244-->
+		<div class="vWrap" data-config='{"triggerType":"click",
+										"effect":"noe",
+										"auto":3000,
+										"invoke":1}'>
+				<p class="vtitle">您可能还想浏览：</p>
+				<div class="vMain">
+					<ul class="vList" >
+						<li class="show"><img src="nicoKids/img/kid_1.jpg"/><p>1内容一</p><p>内容二</p></li>
+						<li class="show"><img src="nicoKids/img/kid_1.jpg"/><p>2内容一</p><p>内容二</p></li>
+						<li class="show"><img src="nicoKids/img/kid_1.jpg"/><p>3内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_2.jpg"/><p>4内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_2.jpg"/><p>5内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_2.jpg"/><p>6内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_3.jpg"/><p>7内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_3.jpg"/><p>8内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_3.jpg"/><p>9内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_4.jpg"/><p>10内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_4.jpg"/><p>11内容一</p><p>内容二</p></li>
+						<li><img src="nicoKids/img/kid_4.jpg"/><p>12内容一</p><p>内容二</p></li>
+					</ul>
+					<div class="vBtn">
+						<span class="vPrev"></span>
+						<span class="vNext"></span>
+					</div>
+				</div>
+		</div>
+		<script type="text/javascript">
+			var videoList1=new vList($(".vWrap"));
+		</script>
+	</body>
+</html>

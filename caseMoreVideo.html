@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style type="text/css">
+			html,body,div,ul,li,a,h2,p,span,img{padding: 0;margin: 0;}
+			a{text-decoration: none;color: #000;}
+			li{list-style: none;}
+			/*主体*/
+			.v_show{border: 1px solid #000;width: 760px;}
+			/*标题部分*/
+			.v_caption{position: relative;overflow: hidden;}
+			.v_caption .bg{height: 36px;width: 800px;background: #CCC;}
+			.v_caption .htitle{position: absolute;top: 0;left: 5px;width:100px;height: 36px;line-height: 36px;}
+			.v_caption .hilight_tip{position: absolute;top: 13px;left: 110px;width: 60px;height: 10px;}
+			.hilight_tip>span{float:left;width: 10px;height: 10px;background: #FFF;border-raxdius: 50%;margin-left: 5px;}
+			.v_caption .current{background: palevioletred;}
+			.v_caption .page{position: absolute;left: 180px;top:10px;width: 36px;height: 16px;color:black;border: 1px solid #000000;background: #FFF;border-radius: 10%;}
+			.page .icon-triangle-left{position: absolute;top:0px;left: 6px;border-right: 1px dotted black;padding-right: 6px;}
+			.page .icon-triangle-right{position: absolute;top:0px;left: 24px;}
+			#more{position: absolute;right: 10px;top:0;font-size: 14px;line-height: 36px;}
+			/*内容部分*/
+			.content{position: relative;width: 760px;height: 180px;overflow: hidden;}
+			.content ul{position: absolute;top: 0;left: 0;height: 180px;}
+			.content li{float: left;margin: 5px;}
+			.content img{width: 180px;height: 120px;}
+		</style>
+		<script src="jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $i_left=$(".icon-triangle-left");
+				var $i_right=$(".icon-triangle-right");
+				var $v_width=$(".content").width();
+				var $v_img=$(".content img");
+				var $point=$(".hilight_tip span");
+				var page=1;
+				$i_left.click(function(){
+					if(page==1){$("ul").animate({left:"-2280px"},200);page=$v_img.length/4;}
+					else{$("ul").animate({left:"+="+$v_width},200);page--;}
+					$point.eq(page-1).addClass("current").siblings().removeClass("current")
+				});
+				$i_right.click(function(){
+					if(page==Math.ceil($v_img.length/4)){$("ul").animate({left:"0px"},200);page=1;}
+					else{$("ul").animate({left:"-="+$v_width},200);page++;}
+					$point.eq(page-1).addClass("current").siblings().removeClass("current")
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="v_show">
+			<div class="v_caption">
+				<div class="bg"></div>
+				<h2 class="htitle" title="人像摄影">示例图片</h2>
+				<div class="hilight_tip">
+					<span class="current"></span>
+					<span ></span>
+					<span ></span>
+					<span ></span>
+				</div>
+				<div class="page">
+					<span class="icon-triangle-left"></span>
+					<span class="icon-triangle-right"></span>
+				</div>
+				<em id="more"><a href="#">更多>></a></em>
+			</div>
+			<div class="content">
+				<ul>
+					<li><a href="#"><img src="nicoKids/img/kid_1.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_1.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_1.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_1.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_2.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_2.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_2.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_2.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_3.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_3.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_3.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_3.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_4.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_4.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_4.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+					<li><a href="#"><img src="nicoKids/img/kid_4.jpg"/></a><p>示例小朋友</p><p>播放：28276</p></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>
