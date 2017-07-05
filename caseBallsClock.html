@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{padding: 50px;}
+			canvas{border-bottom: 1px solid #0effe6;}
+		</style>
+	</head>
+	<body>
+		<div><canvas id="render" width="900" height="400"></canvas></div>
+		<script type="text/javascript">
+			var digit=[
+						[
+							[0,0,1,1,1,0,0],
+				            [0,1,1,0,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,0,1,1,0],
+				            [0,0,1,1,1,0,0]
+				        ],//0
+				        [
+				            [0,0,0,1,1,0,0],
+				            [0,1,1,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [1,1,1,1,1,1,1]
+				        ],//1
+				        [
+				            [0,1,1,1,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,1,1,0,0,0],
+				            [0,1,1,0,0,0,0],
+				            [1,1,0,0,0,0,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,1,1,1,1,1]
+				        ],//2
+				        [
+				            [1,1,1,1,1,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,1,1,1,0,0],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,1,1,0]
+				        ],//3
+				        [
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,1,0],
+				            [0,0,1,1,1,1,0],
+				            [0,1,1,0,1,1,0],
+				            [1,1,0,0,1,1,0],
+				            [1,1,1,1,1,1,1],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,1,1]
+				        ],//4
+				        [
+				            [1,1,1,1,1,1,1],
+				            [1,1,0,0,0,0,0],
+				            [1,1,0,0,0,0,0],
+				            [1,1,1,1,1,1,0],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,1,1,0]
+				        ],//5
+				        [
+				            [0,0,0,0,1,1,0],
+				            [0,0,1,1,0,0,0],
+				            [0,1,1,0,0,0,0],
+				            [1,1,0,0,0,0,0],
+				            [1,1,0,1,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,1,1,0]
+				        ],//6
+				        [
+				            [1,1,1,1,1,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,0,1,1,0,0],
+				            [0,0,1,1,0,0,0],
+				            [0,0,1,1,0,0,0],
+				            [0,0,1,1,0,0,0],
+				            [0,0,1,1,0,0,0]
+				        ],//7
+				        [
+				            [0,1,1,1,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,1,1,0]
+				        ],//8
+				        [
+				            [0,1,1,1,1,1,0],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [1,1,0,0,0,1,1],
+				            [0,1,1,1,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,0,1,1],
+				            [0,0,0,0,1,1,0],
+				            [0,0,0,1,1,0,0],
+				            [0,1,1,0,0,0,0]
+				        ],//9
+				        [
+				            [0,0,0,0],
+				            [0,0,0,0],
+				            [0,1,1,0],
+				            [0,1,1,0],
+				            [0,0,0,0],
+				            [0,0,0,0],
+				            [0,1,1,0],
+				            [0,1,1,0],
+				            [0,0,0,0],
+				            [0,0,0,0]
+				        ]//:			
+        		];
+			var dom=document.getElementById('render');
+			var ctx=dom.getContext('2d');
+			var width=dom.width;
+			var height=dom.height;
+			var radius=4;
+			var closingDate=new Date(2018,0,1,0,0,0).getTime();//毫秒形式的预设时间，可以在html中利用data-预设参数。
+			var curShowTime=getCurrentShowTime();
+			var balls=[];
+			var colors=['#7cff7c','#0effe6','#5e80a5','#f3c903','#ff4a79','#a656e8','#5488ff','#ffe9a3','#f0bff2','#eb6c9f']
+			setInterval(
+				function(){
+					render();
+					update();
+//					console.log(balls[1].x)
+				},50);//表现层与数据层分开，依靠定时器的驱动。
+			function render(){
+				ctx.clearRect(0,0,width,height);
+				var days=parseInt(curShowTime/(3600*24))
+				var hours=parseInt(parseInt(curShowTime%(3600*24))/3600);
+				var minutes=parseInt(parseInt(parseInt(curShowTime%(3600*24))%3600)/60);
+				var seconds=parseInt(curShowTime%60);
+				
+				drawNumbers(0,0,parseInt(days/100),ctx);
+				drawNumbers(15*(radius+1),0,parseInt(parseInt(days%100)/10),ctx);
+				drawNumbers(30*(radius+1),0,parseInt(days%10),ctx);
+				drawNumbers(45*(radius+1),0,10,ctx);
+				drawNumbers(60*(radius+1),0,parseInt(hours/10),ctx);
+				drawNumbers(75*(radius+1),0,parseInt(hours%10),ctx);
+				drawNumbers(90*(radius+1),0,10,ctx);
+				drawNumbers(105*(radius+1),0,parseInt(minutes/10),ctx);
+				drawNumbers(120*(radius+1),0,parseInt(minutes%10),ctx);
+				drawNumbers(135*(radius+1),0,10,ctx);
+				drawNumbers(150*(radius+1),0,parseInt(seconds/10),ctx);
+				drawNumbers(165*(radius+1),0,parseInt(seconds%10),ctx);
+				//利用定时器的50ms时间差，对即将跳出的小球进行绘制
+				for(var i=0;i<balls.length;i++){
+					ctx.fillStyle=balls[i].color;
+					ctx.beginPath();
+					ctx.arc(balls[i].x,balls[i].y,radius,0,2*Math.PI,false);
+					ctx.closePath();
+					ctx.fill();
+				}
+			}
+			function update(){
+				var nextShowTime=getCurrentShowTime();
+				
+				nextHour=parseInt(parseInt(curShowTime%(3600*24))/3600);
+				nextMinute=parseInt(parseInt(parseInt(curShowTime%(3600*24))%3600)/60);
+				nextSecond=parseInt(nextShowTime%60);
+				
+				curHour=parseInt(parseInt(curShowTime%(3600*24))/3600);
+				curMinute=parseInt(parseInt(parseInt(curShowTime%(3600*24))%3600)/60);
+				curSecond=parseInt(curShowTime%60);
+				if(nextShowTime!=curShowTime){
+					if(parseInt(curMinute%10)!=parseInt(nextMinute%10)){
+						addBalls(135*(radius+1),0,parseInt(curMinute%10));
+					}
+					if(parseInt(curSecond/10)!=parseInt((nextSecond/10))){
+						addBalls(150*(radius+1),0,parseInt(curSecond/10));
+					}
+					if(parseInt(curSecond%10)!=parseInt(nextSecond%10)){
+//						console.log(parseInt(curSecond%10))
+						addBalls(165*(radius+1),0,parseInt(curSecond%10));
+					}
+					curShowTime=nextShowTime;
+				}
+				updateBalls();
+			}
+			function updateBalls(){
+				for(var i=0;i<balls.length;i++){
+					if(balls[i].y>=height-radius){
+						balls[i].y=height-radius;
+						balls[i].vy=-3*balls[i].vy/5;
+					}
+					balls[i].x+=balls[i].vx;
+					balls[i].y+=balls[i].vy;
+					balls[i].vy+=balls[i].g;
+				}
+				var control=0;
+				for(var i=0;i<balls.length;i++){
+					if(balls[i].x>0&&balls[i].x<width){
+						balls[control++]=balls[i];
+					}
+				}
+				while(balls.length>Math.min(control,500)){
+					balls.pop();
+				}
+//				console.log(balls.length)
+			}
+			function addBalls(x,y,num){
+				for(var i=0;i<digit[num].length;i++){
+					for(var j=0;j<digit[num][i].length;j++){
+						if(digit[num][i][j]==1){
+							var aball={
+								x:x+j*2*(radius+1)+(radius+1),
+								y:y+i*2*(radius+1)+(radius+1),
+								vx:Math.pow(-1,Math.ceil(Math.random()*100))*4,
+								vy:-4,
+								g:1.5+Math.random(),
+								color:colors[Math.round(Math.random()*colors.length)]
+							};
+							balls.push(aball);
+						}
+					}
+				}
+			}
+			function getCurrentShowTime(){
+				var ret=(closingDate-new Date().getTime())/1000;
+				ret=Math.round(ret);
+				return ret>0?ret:0
+			}
+			function drawNumbers(x,y,num,ctx){
+				for(var i=0;i<digit[num].length;i++){
+					for(var j=0;j<digit[num][i].length;j++){
+						if(digit[num][i][j]===1){
+							ctx.beginPath();
+							ctx.arc(x+j*(radius+1)*2+(radius+1),i*(radius+1)*2+(radius+1),radius,2*Math.PI,false);
+							ctx.fillStyle='red';
+							ctx.fill();
+							ctx.closePath();
+						}else{moveTo(0,0)}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
+
