@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>爱奇艺-全球领先的在线视频网站</title>
+		<link rel="stylesheet" href="iqiyi/iqiyi.css" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="iqiyi/tabJquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var tab1=new Tab($(".js-tab").eq(0));
+				var turn1=new Turn($(".newsTurn").eq(0));
+				var turn2=new Turn($(".vsTurn").eq(0));
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+		<div class="top">
+			<div class="logobar">
+				<div class="title">
+					<img class="fl" id="topLogo" src="iqiyi/pic/logo.PNG" alt="iqiyi" />
+					<div id="src">
+						<input type="text" id="search" value="奔跑吧" />
+						<input type="button" name="srcBtn" id="srcBtn" value="搜全网" />
+					</div>
+					<div class="menu fr">
+						<a>登录</a>
+						<a>注册</a>
+						<a>开通VIP</a>
+						<a>上传</a>
+						<a>下载客户端</a>
+						<a>消息</a>
+						<a>播放记录</a>
+					</div>
+				</div>
+			</div>
+			<div class="banner comWidth clearfix">
+				<div class="js-tab tab" data-config='{
+												"triggerType":"mouseover",
+												"effect":"fade",
+												"invoke":1,
+												"auto":1500}'>
+					<ul class="tab_nav"	>
+						<li class="actived"><a>嗨到你红了首播：陈汉典挑大梁</a></li>
+						<li><a>鬼吹灯之牧野诡事：掘子军现身</a></li>
+						<li><a>楚乔传：林更新替赵丽颖解围</a></li>
+						<li><a>中国有嘻哈：偶像歌手遭质疑</a></li>
+						<li><a>我的前半生抢先看：靳东上线</a></li>
+						<li><a>盲侠大律师：超感律师断奇案</a></li>
+						<li><a>夏至未至：傅小司立夏甜蜜拥吻</a></li>
+						<li><a>复合大师：专治都市爱情病</a></li>
+						<li><a>跨时空营救：生死存亡一触即发</a></li>
+						<li><a>沈小姐的私房菜：三色虾仁</a></li>
+					</ul>
+					<!--bug1:闪动，且自动轮播有问题，需要进出banner才动-->
+					<div class="content_wrap">
+						<div class="content_item current"><img src="iqiyi/pic/1.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/2.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/3.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/4.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/5.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/6.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/7.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/8.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/9.PNG"/></div>
+						<div class="content_item"><img src="iqiyi/pic/10.PNG"/></div>
+					</div>
+				</div>
+			</div>
+			<div class="navMenu">
+				<div class="navWrap">
+					<ul class="nav_one">
+						<li><a>娱乐</a></li>
+						<li><a>体育</a></li>
+						<li><a>资讯</a></li>
+					</ul>
+					<ul class="nav_two">
+						<li><a>电影</a></li>
+						<li><a>电视剧</a></li>
+						<li><a>片花</a></li>
+						<li><a>综艺</a></li>
+						<li><a>网络电影</a></li>
+						<li><a>脱口秀</a></li>
+					</ul>
+					<ul class="nav_three">
+						<li><a>动漫</a></li>
+						<li><a>生活</a></li>
+						<li><a>儿童</a></li>
+						<li><a>母婴</a></li>
+						<li><a>教育</a></li>
+						<li><a>健康</a></li>
+					</ul>
+					<ul class="nav_four">
+						<li><a>音乐</a></li>
+						<li><a>搞笑</a></li>
+						<li><a>时尚</a></li>
+						<li><a>原创</a></li>
+						<li><a>旅游</a></li>
+						<li><a>拍客</a></li>
+					</ul>
+					<ul class="nav_five">
+						<li><a>财经</a></li>
+						<li><a>军事</a></li>
+						<li><a>科技</a></li>
+						<li><a>公益</a></li>
+						<li><a>汽车</a></li>
+						<li><a>纪录片</a></li>
+					</ul>
+					<ul class="nav_six">
+						<li><a>风云榜</a></li>
+						<li><a>奇秀直播</a></li>
+						<li><a>全网影视</a></li>
+						<li><a>直播中心</a></li>
+						<li><a>全网搜索</a></li>
+						<li><a>应用商店</a></li>
+					</ul>
+					<ul class="nav_seven">
+						<li><a>商城</a></li>
+						<li><a>大头</a></li>
+						<li><a>文学</a></li>
+						<li><a>游戏视频</a></li>
+						<li><a>爱奇艺号</a></li>
+						<li><a>广告</a></li>
+						<li><a>游戏中心</a></li>
+						<li><a>VR</a></li>
+						<li><a>个人中心</a></li>
+					</ul>
+					<ul class="nav_eight">
+						<li><a>VIP会员</a></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="news clearfix">
+				<div class="newsColOne fl">
+					<div class="top">
+						<h2 class="fl clearfix"><a class="title">今日焦点</a><a>更多></a></h2>
+						<a class="iqyOnly fr">独播</a>
+					</div>
+					<div class="middle">
+						<h3><a>湘江水位破历史极值 省内三大河流超警</a></h3>
+						<p><a>网友飞机上拍洪水中的长沙</a>&nbsp;<a>大学生洪水中淡定弹钢琴</a></p>
+						<ul>
+							<li><a>中国警察震惊FBI 凭模糊监控绘章莹颖案嫌犯画像</a></li>
+							<li><a>小伙在家不穿衣服遭投诉 猩猩指挥游客倒饮料</a></li>
+							<li><a>美女徒手摔倒600斤壮牛 毒枭整容变脸躲过追捕</a></li>
+							<li><a>动物园投驴喂虎后为驴建纪念碑：它是冤死的</a></li>
+							<li><a>父子玩游戏高速路停车单挑 俩男子公园被罚跪爬</a></li>
+						</ul>
+					</div>
+					<div class="bottom">
+						<a>
+							<img src="iqiyi/pic/22.PNG"/>
+							<p>小孩头被卡防盗网动弹不得</p>
+						</a>
+						<a>
+							<img src="iqiyi/pic/23.PNG"/>
+							<p>男子表演喷火引火烧身</p>
+						</a>
+					</div>
+				</div>
+				<div class="newsColTwo fl clearfix">
+					<div class="newsTurn">
+						<ul>
+							<li><a><img src="iqiyi/pic/11.PNG"/></a></li>
+							<li class="hide"><a><img src="iqiyi/pic/12.PNG"/></a></li>
+						</ul>
+						<div class="turnLeft"></div>
+						<div class="turnRight"></div>
+					</div>
+					<ul >
+						<li><a>周杰伦昆凌游日本包裹严实 小女儿奶音对话贾静雯</a></li>
+						<li><a>AB牛仔长裙亮相俏皮 吴绮莉：控制不了女儿见成龙</a></li>
+						<li><a>杨紫秦俊杰被嘲“恋爱脑” 《极限3》黄磊变“月老”</a></li>
+						<li><a>鹿晗动画MV多重色彩碰撞 景甜五大刊撞衫赵丽颖</a></li>
+						<li><a>花少娜扎同款防晒喷雾 什么味道让人闻香起舞？</a></li>
+					</ul>
+				</div>
+				<div class="newsColThree fr">
+					<a><img src="iqiyi/pic/13.PNG"/><p>《嘻哈》Jony J神似黄渤</p></a>
+					<a><img src="iqiyi/pic/14.PNG"/><p>大墓探奇 重启“摸金”时代</p></a>
+					<a><img src="iqiyi/pic/15.PNG"/><p>姐姐好饿:张亮遭天天折磨</p></a>
+					<a><img src="iqiyi/pic/16.PNG"/><p>双宋CP甜蜜撒糖合辑</p></a>
+					<a><img src="iqiyi/pic/17.PNG"/><p>如果电影里的英雄真的存在</p></a>
+					<a><img src="iqiyi/pic/18.PNG"/><p>小蛮霸气英文惊呆谢依霖</p></a>
+					<a><img src="iqiyi/pic/19.PNG"/><p>2017上半年热播剧原声</p></a>
+					<a><img src="iqiyi/pic/20.PNG"/><p>萌娃与二哈一言不合就亲亲</p></a>
+					<a><img src="iqiyi/pic/21.PNG"/><p>大张伟曝易烊千玺朋友圈</p></a>
+				</div>
+			</div>
+			<div class="varietyShow">
+				<div class="vsLeft">
+					<p>综艺<span>更多></span><a>奔跑吧</a> <a>坑王驾到</a> <a>中国新歌声2</a> <a>极限挑战3</a></p>
+					<div class="vsTurn fl">
+						<ul>
+							<li><a>
+								<img src="iqiyi/pic/24.PNG"/>
+								<p>大学生来了第2季：吐槽父母</p>
+								<p>巴图曝宋丹丹对同龄女艺人有敌意？大张伟成女儿奴</p>
+							</a></li>
+							<li class="hide"><a>
+								<img src="iqiyi/pic/25.PNG"/>
+								<p>无与伦比的发布会</p>
+								<p>吴莫愁与罗志祥比谁更红？情景再现朱碧石引发爆笑</p>
+							</a></li>
+						</ul>
+						<div class="goLeft"></div>
+						<!--bug2：选择移出还是延迟还是解绑来消除重复点击造成的多次切换-->
+						<div class="goRight"></div>
+					</div>
+					<div class="vsVideo fl clearfix">
+						<a><img src="iqiyi/pic/26.PNG"/>
+							<p>奔跑吧</p>
+							<span>郑恺韩东君三连对撕名牌</span>
+						</a>
+						<a><img src="iqiyi/pic/27.PNG"/>
+							<p>来吧冠军第2季</p>
+							<span>郑恺实力拆台贾乃亮：假队长</span>
+						</a>
+						<a><img src="iqiyi/pic/28.PNG"/>
+							<p>笑声传奇</p>
+							<span>张信哲改行说相声秀《报菜名》</span>
+						</a>
+						<a><img src="iqiyi/pic/29.PNG"/>
+							<p>跨界歌王</p>
+							<span>耿直boy朴树直言帮唱因缺钱</span>
+						</a>
+						<a><img src="iqiyi/pic/30.PNG"/>
+							<p>坑王驾到：VIP尊享</p>
+							<span>狐狸精被僵尸大大的“拥抱”</span>
+						</a>
+						<a><img src="iqiyi/pic/31.PNG"/>
+							<p>金曲捞</p>
+							<span>不如跳舞！杜丽莎谭咏麟再聚首</span>
+						</a>
+						<a><img src="iqiyi/pic/32.PNG"/>
+							<p>歌声的翅膀</p>
+							<span>孙楠耀杰“父子档”再唱原创</span>
+						</a>
+						<a><img src="iqiyi/pic/33.PNG"/>
+							<p>音乐大师课第3季</p>
+							<span>杨钰莹带学员体验经典兵营拉歌</span>
+						</a>
+					</div>
+				</div>
+				<div class="vsRight">
+					<h2>精彩推荐<span>更多></span></h2>
+					<div>
+						<a>
+							<img src="iqiyi/pic/34.PNG"/>
+							<p>奔跑团内部排位之争</p>
+						</a>
+						<ul>
+							<li><a>周杰伦陈奕迅斗智斗勇</a></li>
+							<li><a>王嘉尔穿增高垫遭拆穿</a></li>
+							<li><a>张艺兴秀帅气捞面舞</a></li>
+							<li><a>周杰伦展武侠中国风</a></li>
+							<li><a>陈汉典带你一起嗨到红</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="iqiyiVS">
+				<p>自制综艺<span>中国有嘻哈></span><a>大学生来了2</a> <a>姐姐好饿2</a></p>
+				<div class="IVSvideo">
+					<a><img src="iqiyi/pic/35.PNG"/><p><span>中国有嘻哈</span>没对比没伤害！吴亦凡同乡口音被嫌弃</p></a>
+					<a><img src="iqiyi/pic/36.PNG"/><p><span>姐姐好饿2</span>抢鲜：宫心计！佘诗曼撒娇求张亮恩宠</p></a>
+					<a><img src="iqiyi/pic/37.PNG"/><p><span>大学生来了2</span>大张伟竟称可以接受女儿穿着暴露</p></a>
+					<a><img src="iqiyi/pic/38.PNG"/><p><span>了不起的孩子</span>周六12点：萌娃魔音出口险震晕孟非</p></a>
+					<a><img src="iqiyi/pic/39.PNG"/><p><span>无与伦比</span>苏醒被吐槽中年发福一言不合就freestyle</p></a>
+					<a><img src="iqiyi/pic/40.PNG"/><p><span>爱笑会议室</span>辣眼cosplay！樱木花道看了要流泪</p></a>
+					<a><img src="iqiyi/pic/41.PNG"/><p><span>嗨到你红了</span>首播：包邮区林志玲瞬间软化陈汉典</p></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<!--<a href="#topLogo" style="color: black;"><span id="gotop"></span>回到顶部</a>-->
+			<div class="ftcont">
+				<ul>
+					<li class="one"><a>京网文[2015]0652-282号-1</a><a>京ICP证110636号</a></li>
+					<li class="two"><a><i class="honest"></i>中国互联网诚信联盟</a><a><i class="sell"></i>经营性网站备案信息 经营性网站备案信息</a></li>
+					<li class="three"><a>出版物经营许可证</a><a>京公网安备 11010802010263号</a></li>
+					<li class="four"><a>信息网络传播视听节目许可证 0110544号</a><a>增值电信业务经营许可证 B2-20120273</a></li>
+					<li class="five"><a>广播电视节目制作经营许可证 (京)字第1938号</a><a>互联网药品信息服务资格证书 (京)-经营性-2013-0012</a></li>
+				</ul>
+				<div>
+					<a><i class="medical"></i>互联网医疗保健信息服务审核同意书 京卫计网审[2015]第0627号</a>
+				</div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a>公司介绍</a></li><span></span>
+					<li><a>新闻动态</a></li><span></span>
+					<li><a>联系方式</a></li><span></span>
+					<li><a>招聘英才</a></li><span></span>
+					<li><a>爱奇艺实验室</a></li><span></span>
+					<li><a>开放平台</a></li><span></span>
+					<li><a>爱奇艺内容合作标准</a></li><span></span>
+					<li><a>爱奇艺作者中心</a></li><span></span>
+					<li><a>安全应急响应中心</a></li><span></span>
+					<li><a>帮助中心</a></li><span></span>
+					<li><a>侵权投诉</a></li>
+				</ul>
+			</div>
+			<div class="police">
+				<ul>
+					<li><a>中国互联网举报中心</a></li>
+					<li><a>网络举报APP下载</a></li>
+					<li><a>网上有害信息举报专区</a></li>
+					<li><a>网上暴恐有害信息举报</a></li>
+					<li><a>违法和不良信息举报电话：400-923-7171</a></li>
+					<li><a>举报邮箱：jubao365@qiyi.com</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<p><a>反盗版和反盗链权利申明</a> Copyright © 2017 爱奇艺 All Rights Reserved</p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
