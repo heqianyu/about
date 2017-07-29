@@ -4,15 +4,6 @@
 		<meta charset="UTF-8">
 		<title>爱奇艺-全球领先的在线视频网站</title>
 		<link rel="stylesheet" href="iqiyi/iqiyi.css" />
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="iqiyi/tabJquery.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			$(function(){
-				var tab1=new Tab($(".js-tab").eq(0));
-				var turn1=new Turn($(".newsTurn").eq(0));
-				var turn2=new Turn($(".vsTurn").eq(0));
-			});
-		</script>
 	</head>
 	<body>
 		<div class="wrap">
@@ -21,7 +12,7 @@
 				<div class="title">
 					<img class="fl" id="topLogo" src="iqiyi/pic/logo.PNG" alt="iqiyi" />
 					<div id="src">
-						<input type="text" id="search" value="奔跑吧" />
+						<input type="text" id="search" placeholder="奔跑吧！兄弟" autofocus />
 						<input type="button" name="srcBtn" id="srcBtn" value="搜全网" />
 					</div>
 					<div class="menu fr">
@@ -319,5 +310,14 @@
 			</div>
 		</div>
 		</div>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="iqiyi/tabJquery.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var tab1=new Tab($(".js-tab").eq(0));
+				var turn1=new Turn($(".newsTurn").eq(0));
+				var turn2=new Turn($(".vsTurn").eq(0));
+			});
+		</script>
 	</body>
 </html>
