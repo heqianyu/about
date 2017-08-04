@@ -8,23 +8,23 @@ img{border:none;}
 
 .right{
 	display: inline-block;
-	width: 14px;
-	height: 26px;
-	margin: -3px 13px -3px 41px;
-	background: url(images/img.png);
-	background-position: -32px 0;
+	width: 0.1867rem;
+	height: 0.3333rem;
+	margin: -0.0267rem 0.1733rem -0.0667rem 0.5467rem;
+	background: url(images/right.png) no-repeat;
+	background-size: contain;
 }
 
 .wrap{
 	background: #f1f0f6;
-	width:100%;
+	width:10rem;
 }
 
 .top_bar{
 	width:100%;
-	height: 86px;
-	line-height: 86px;
-	font-size: 34px;
+	height: 1.1467rem;
+	line-height: 1.1467rem;
+	font-size: 0.4533rem;
 	font-weight: bold;
 	color: white;
 	background: #2e2d33;
@@ -37,90 +37,90 @@ img{border:none;}
 }
 .guest_info div{
 	width:100%;
-	height: 85px;
-	line-height: 85px;
-	font-size: 25px;
+	height: 1.1333rem;
+	line-height: 1.1333rem;
+	font-size: 0.3333rem;
 	background: #ffffff;
 	box-sizing: border-box;
-	padding: 0 90px 0 22px;
+	padding: 0 0.2933rem;
 	margin-bottom: 2px;
 }
 .name span,.tel span{
-	margin-left: 38px;
+	margin-left: 0.5067rem;
 }
 #ad_detail{
-	height: 158px;
-	margin-bottom: 18px;
+	height: 2.1067rem;
+	margin-bottom: 0.24rem;
 }
 #ad_detail p{
-	font-size: 25px;
-	line-height: 25px;
-	padding: 37px 0 17px;
+	font-size: 0.3333rem;
+	line-height: 0.3333rem;
+	padding: 0.4933rem 0 0.2267rem;
 }
 
 .service div{
 	width: 100%;
-	height: 85px;
-	line-height: 85px;
-	font-size: 25px;
+	height: 1.1333rem;
+	line-height: 1.1333rem;
+	font-size: 0.3333rem;
 	background: #ffffff;
 	box-sizing: border-box;
-	padding: 0 22px;
+	padding: 0 0.2933rem;
 	margin-bottom: 1px;
 }
 .service>.circle{
 	margin-bottom: 2px;
 }
 .service .since{
-	padding: 0 90px 0 22px;
+	padding: 0 1.2rem 0 0.2933rem
 }
 #time{
-	margin-bottom: 18px;
+	margin-bottom: 0.24rem;
 }
 
 .goods{
-	margin-bottom: 103px;
+	margin-bottom: 1.3733rem;
 }
 .goods div{
 	width: 100%;
-	height: 85px;
-	line-height: 85px;
-	font-size: 25px;
+	height: 1.1333rem;
+	line-height: 1.1333rem;
+	font-size: 0.3333rem;
 	background: #ffffff;
 	box-sizing: border-box;
-	padding: 0 22px;
+	padding: 0 0.2933rem;
 	margin-bottom: 2px;
 }
 .goods .quantity{
-	padding: 0 90px 0 22px;
+	padding: 0 1.2rem 0 0.2933rem;
 }
 
 .add_more{
 	display: inline-block;
 	width: 100%;
-	height: 85px;
-	font-size: 25px;
-	margin-bottom: 35px;
+	height: 1.1333rem;
+	font-size: 0.3333rem;
+	margin-bottom: 0.4667rem;
 	background: #FFF;
 	text-align: center;
 }
 .add_more p{
-	line-height: 85px;
+	line-height: 1.1333rem;
 }
 .add_more .plus{
 	display: inline-block;
-	width:24px;
-	height: 25px;
-	margin: -2px 14px;
-	background: url(images/img.png);
-	background-position: 0 0;
+	width:0.32rem;
+	height: 0.3333rem;
+	margin: -0.0267rem 0.1867rem;
+	background: url(images/plus.png) no-repeat;
+	background-size: contain;
 }
 
 .created{
 	width:100%;
-	height: 98px;
-	line-height: 98px;
-	font-size: 25px;
+	height: 1.3067rem;
+	line-height: 1.3067rem;
+	font-size: 0.3333rem;
 	color: #FFF;
 	background: #81cd4e;
 	text-align: center;

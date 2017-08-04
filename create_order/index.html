@@ -3,18 +3,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport">
 	<title>new order</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script type="text/javascript">
-		let dpr = window.devicePixelRatio;
-		let meta = document.createElement('meta');
-		let initialScale = 1 / dpr;
-		let maximumScale = 1 / dpr;
-		let minimumScale = 1 / dpr;
-		meta.setAttribute('name', 'viewport');
-		meta.setAttribute('content', `width=device-width, user-scalable=no, initial-scale=${initialScale}, maximum-scale=${maximumScale}, minimum-scale=${minimumScale}`);
-		document.head.appendChild(meta);
-	</script>
 </head>
 <body>
 	<div class="wrap">
@@ -29,7 +20,7 @@
 				<p>客户电话<span>13255452123</span></p>
 			</div>
 			<div class="ad">
-				<p>地址<span class="fr">广东省深圳市南山区</span></p>
+				<p>地址<span class="fr">广东省深圳市南山区<i class="right"></i></span></p>
 			</div>
 			<div id="ad_detail">
 				<p>高新南环路29号留学生创业大厦2201</p>
@@ -61,5 +52,10 @@
 			<p>创建订单</p>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var scale = 1 / devicePixelRatio;
+		document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	</script>
 </body>
 </html>
