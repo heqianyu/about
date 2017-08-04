@@ -18,8 +18,8 @@ img{border:none;}
 	-webkit-tap-highlight-color: transparent; 
 }
 .right:active{  
-    box-shadow: inset 0 5px 10px #B41313,inset 0 -5px 10px #B41313;  
-}  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+}
 
 .wrap{
 	background: #f1f0f6;
@@ -120,6 +120,9 @@ img{border:none;}
 	margin: -0.0267rem 0.1867rem;
 	background: url(images/plus.png) no-repeat;
 	background-size: contain;
+}
+.add_more .plus:active{  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
 }
 
 .created{
