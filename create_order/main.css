@@ -67,6 +67,9 @@ input:focus {
 	padding: 0 0.2933rem;
 	margin-bottom: 2px;
 }
+.guest_info .ad:active{  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+}
 .name input,.tel input{
 	margin-left: 0.5067rem;
 }
@@ -91,6 +94,9 @@ input:focus {
 	padding: 0 0.2933rem;
 	margin-bottom: 1px;
 }
+.service div:active{  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+}
 .service>.circle{
 	margin-bottom: 2px;
 }
@@ -113,6 +119,9 @@ input:focus {
 	box-sizing: border-box;
 	padding: 0 0.2933rem;
 	margin-bottom: 2px;
+}
+.goods div:active{  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
 }
 .goods .quantity{
 	padding: 0 1.2rem 0 0.2933rem;
@@ -138,7 +147,7 @@ input:focus {
 	background: url(images/plus.png) no-repeat;
 	background-size: contain;
 }
-.add_more .plus:active{  
+.add_more:active{  
     box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
 }
 
