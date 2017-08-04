@@ -1,6 +1,7 @@
 /*main.css*/
 html{color: #6f6f6f;}
 body,p,div,i,span{margin: 0;padding:0;}
+/*字体会有较大差异，没用苹方的原因*/
 body{font-family:Helvetica;}
 img{border:none;}
 .fl{float: left;}
@@ -13,7 +14,12 @@ img{border:none;}
 	margin: -0.0267rem 0.1733rem -0.0667rem 0.5467rem;
 	background: url(images/right.png) no-repeat;
 	background-size: contain;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent; 
 }
+.right:active{  
+    box-shadow: inset 0 5px 10px #B41313,inset 0 -5px 10px #B41313;  
+}  
 
 .wrap{
 	background: #f1f0f6;
@@ -97,12 +103,12 @@ img{border:none;}
 
 .add_more{
 	display: inline-block;
+	font-size: 0.3333rem;
+	text-align: center;
 	width: 100%;
 	height: 1.1333rem;
-	font-size: 0.3333rem;
 	margin-bottom: 0.4667rem;
 	background: #FFF;
-	text-align: center;
 }
 .add_more p{
 	line-height: 1.1333rem;
@@ -117,11 +123,11 @@ img{border:none;}
 }
 
 .created{
+	text-align: center;
 	width:100%;
 	height: 1.3067rem;
 	line-height: 1.3067rem;
 	font-size: 0.3333rem;
 	color: #FFF;
 	background: #81cd4e;
-	text-align: center;
 }
