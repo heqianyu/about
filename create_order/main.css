@@ -1,0 +1,121 @@
+/*main.css*/
+html{font-size: 10px;color: #6f6f6f;}
+body,p,div,i,span{margin: 0;padding:0;}
+body{font-family:Helvetica;}
+img{border:none;}
+.fl{float: left;}
+.fr{float: right;}
+
+.right{
+	display: inline-block;
+	width: 14px;
+	height: 26px;
+	margin: -3px 13px -3px 41px;
+	background: url(images/img.png);
+	background-position: -32px 0;
+}
+
+.wrap{
+	background: #f1f0f6;
+	width:100%;
+}
+
+.top_bar{
+	width:100%;
+	height: 4.3rem;
+	line-height: 89px;
+	font-size: 34px;
+	font-weight: bold;
+	color: white;
+	background: #2e2d33;
+	text-align: center;
+	border-top: #4c4b51 solid 1px;
+}
+
+.guest_info div{
+	width:100%;
+	height: 85px;
+	line-height: 85px;
+	font-size: 25px;
+	background: #ffffff;
+	box-sizing: border-box;
+	padding: 0 90px 0 22px;
+	margin-bottom: 2px;
+}
+#ad_detail{
+	height: 158px;
+	margin-bottom: 18px;
+}
+#ad_detail p{
+	font-size: 25px;
+	line-height: 25px;
+	padding: 37px 0 17px;
+}
+
+.service div{
+	width: 100%;
+	height: 85px;
+	line-height: 85px;
+	font-size: 25px;
+	background: #ffffff;
+	box-sizing: border-box;
+	padding: 0 22px;
+	margin-bottom: 1px;
+}
+.service>.circle{
+	margin-bottom: 2px;
+}
+.service .since{
+	padding: 0 90px 0 22px;
+}
+#time{
+	margin-bottom: 18px;
+}
+
+.goods{
+	margin-bottom: 103px;
+}
+.goods div{
+	width: 100%;
+	height: 85px;
+	line-height: 85px;
+	font-size: 25px;
+	background: #ffffff;
+	box-sizing: border-box;
+	padding: 0 22px;
+	margin-bottom: 2px;
+}
+.goods .quantity{
+	padding: 0 90px 0 22px;
+}
+
+.add_more{
+	display: inline-block;
+	width: 100%;
+	height: 85px;
+	font-size: 25px;
+	margin-bottom: 35px;
+	background: #FFF;
+	text-align: center;
+}
+.add_more p{
+	line-height: 85px;
+}
+.add_more .plus{
+	display: inline-block;
+	width:24px;
+	height: 25px;
+	margin: -2px 14px;
+	background: url(images/img.png);
+	background-position: 0 0;
+}
+
+.created{
+	width:100%;
+	height: 98px;
+	line-height: 98px;
+	font-size: 25px;
+	color: #FFF;
+	background: #81cd4e;
+	text-align: center;
+}
