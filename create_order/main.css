@@ -33,9 +33,6 @@ input:focus {
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent; 
 }
-.right:active{  
-    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
-}
 
 .wrap{
 	background: #f1f0f6;
@@ -78,7 +75,7 @@ input:focus {
 	margin-bottom: 0.24rem;
 }
 #ad_detail input{
-	width: 7rem;
+	width: 9rem;
 	font-size: 0.3333rem;
 	line-height: 0.3333rem;
 	padding: 0.4933rem 0 0.2267rem;
