@@ -7,6 +7,22 @@ img{border:none;}
 .fl{float: left;}
 .fr{float: right;}
 
+input{
+    text-indent: 0;
+    background: transparent;
+    border: 0 none;
+    resize:none; 
+    outline:none;  
+    -webkit-appearance:none;  
+    line-height: 1.1333rem;  
+	font-size: 0.3333rem;
+    }
+input::-webkit-input-placeholder { /* WebKit browsers */
+    line-height: 0.44rem;   
+}
+input:focus {
+    color: #8b8791;
+}
 .right{
 	display: inline-block;
 	width: 0.1867rem;
@@ -51,14 +67,15 @@ img{border:none;}
 	padding: 0 0.2933rem;
 	margin-bottom: 2px;
 }
-.name span,.tel span{
+.name input,.tel input{
 	margin-left: 0.5067rem;
 }
 #ad_detail{
 	height: 2.1067rem;
 	margin-bottom: 0.24rem;
 }
-#ad_detail p{
+#ad_detail input{
+	width: 7rem;
 	font-size: 0.3333rem;
 	line-height: 0.3333rem;
 	padding: 0.4933rem 0 0.2267rem;
@@ -133,4 +150,7 @@ img{border:none;}
 	font-size: 0.3333rem;
 	color: #FFF;
 	background: #81cd4e;
+}
+.created:active{  
+    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
 }
