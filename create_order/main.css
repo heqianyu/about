@@ -1,5 +1,5 @@
 /*main.css*/
-html{font-size: 10px;color: #6f6f6f;}
+html{color: #6f6f6f;}
 body,p,div,i,span{margin: 0;padding:0;}
 body{font-family:Helvetica;}
 img{border:none;}
@@ -22,16 +22,19 @@ img{border:none;}
 
 .top_bar{
 	width:100%;
-	height: 4.3rem;
-	line-height: 89px;
+	height: 86px;
+	line-height: 86px;
 	font-size: 34px;
 	font-weight: bold;
 	color: white;
 	background: #2e2d33;
 	text-align: center;
-	border-top: #4c4b51 solid 1px;
+	border-bottom: #38373d solid 1px;
 }
 
+.guest_info{
+	border-top: #4c4b51 solid 1px;
+}
 .guest_info div{
 	width:100%;
 	height: 85px;
@@ -41,6 +44,9 @@ img{border:none;}
 	box-sizing: border-box;
 	padding: 0 90px 0 22px;
 	margin-bottom: 2px;
+}
+.name span,.tel span{
+	margin-left: 38px;
 }
 #ad_detail{
 	height: 158px;

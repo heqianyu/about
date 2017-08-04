@@ -5,37 +5,16 @@
 	<meta charset="UTF-8">
 	<title>new order</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<style type="text/css">
-		html {
-			font-size : 20px;
-			}
-			@media only screen and (min-width: 401px){
-				html {
-				font-size: 25px !important;
-				}
-			}
-			@media only screen and (min-width: 428px){
-				html {
-				font-size: 26.75px !important;
-				}
-			}
-			@media only screen and (min-width: 481px){
-				html {
-				font-size: 30px !important;
-				}
-			}
-			@media only screen and (min-width: 569px){
-				html {
-				font-size: 35px !important;
-				}
-			}
-			@media only screen and (min-width: 641px){
-				html {
-				font-size: 40px !important;
-				}
-			}
-	</style>
-
+	<script type="text/javascript">
+		let dpr = window.devicePixelRatio;
+		let meta = document.createElement('meta');
+		let initialScale = 1 / dpr;
+		let maximumScale = 1 / dpr;
+		let minimumScale = 1 / dpr;
+		meta.setAttribute('name', 'viewport');
+		meta.setAttribute('content', `width=device-width, user-scalable=no, initial-scale=${initialScale}, maximum-scale=${maximumScale}, minimum-scale=${minimumScale}`);
+		document.head.appendChild(meta);
+	</script>
 </head>
 <body>
 	<div class="wrap">
