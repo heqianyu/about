@@ -65,7 +65,7 @@ input:focus {
 	margin-bottom: 2px;
 }
 .guest_info .ad:active{  
-    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+    box-shadow: inset 0 2px 5px #CCC,inset 0 -2px 5px #CCC;  
 }
 .name input,.tel input{
 	margin-left: 0.5067rem;
