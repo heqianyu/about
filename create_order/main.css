@@ -92,7 +92,7 @@ input:focus {
 	margin-bottom: 1px;
 }
 .service div:active{  
-    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+    box-shadow: inset 0 2px 5px #CCC,inset 0 -2px 5px #CCC;  
 }
 .service>.circle{
 	margin-bottom: 2px;
@@ -118,7 +118,7 @@ input:focus {
 	margin-bottom: 2px;
 }
 .goods div:active{  
-    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+    box-shadow: inset 0 2px 5px #CCC,inset 0 -2px 5px #CCC;  
 }
 .goods .quantity{
 	padding: 0 1.2rem 0 0.2933rem;
@@ -145,7 +145,7 @@ input:focus {
 	background-size: contain;
 }
 .add_more:active{  
-    box-shadow: inset 0 5px 10px #CCC,inset 0 -5px 10px #CCC;  
+    box-shadow: inset 0 2px 5px #CCC,inset 0 -2px 5px #CCC;  
 }
 
 .created{
