@@ -34,7 +34,7 @@ input:focus {
 	-webkit-tap-highlight-color: transparent; 
 }
 
-.wrap{
+#wrap{
 	background: #f1f0f6;
 	width:10rem;
 }
@@ -105,7 +105,7 @@ input:focus {
 }
 
 .goods{
-	margin-bottom: 1.3733rem;
+	margin-bottom: 0.3733rem;
 }
 .goods div{
 	width: 100%;
@@ -130,6 +130,7 @@ input:focus {
 	text-align: center;
 	width: 100%;
 	height: 1.1333rem;
+	margin-top: 1rem;
 	margin-bottom: 0.4667rem;
 	background: #FFF;
 }
@@ -148,7 +149,7 @@ input:focus {
     box-shadow: inset 0 2px 5px #CCC,inset 0 -2px 5px #CCC;  
 }
 
-.created{
+.confirm{
 	text-align: center;
 	width:100%;
 	height: 1.3067rem;
@@ -157,6 +158,6 @@ input:focus {
 	color: #FFF;
 	background: #81cd4e;
 }
-.created:active{  
+.confirm:active{  
     box-shadow: inset 0 5px 10px #FFF,inset 0 -5px 10px #FFF;  
 }

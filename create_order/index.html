@@ -8,22 +8,22 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="wrap">
+	<div id="wrap">
 		<div class="top_bar">
 			<p>燕塘优鲜达-服务部</p>
 		</div>
 		<div class="guest_info">
 			<div class="name">
-				<p>客户姓名<input type="text" name="name" value="林叶"></p>
+				<p>客户姓名<input type="text" v-model = "guest.name" name="name"></p>
 			</div>
 			<div class="tel">
-				<p>客户电话<input type="text" name="tel" value="13255452123"></p>
+				<p>客户电话<input type="text" v-model = "guest.tel" name="tel"></p>
 			</div>
 			<div class="ad">
 				<p>地址<span class="fr">广东省深圳市南山区<i class="right"></i></span></p>
 			</div>
 			<div id="ad_detail">
-				<input type="text" name="tel" value="高新南环路29号留学生创业大厦2201">
+				<input type="text" v-model = "guest.address" name="tel">
 			</div>
 		</div>
 		<div class="service">
@@ -37,18 +37,18 @@
 				<p>时间段<span class="fr">上午（6-8点）<i class="right"></i></span></p>
 			</div>
 		</div>
-		<div class="goods">
+		<div class="goods" v-for="item in goods">
 			<div class="goods_name">
-				<p>品名<span class="fr">燕塘纯牛奶 210ml<i class="right"></i></span></p>
+				<p>品名<span class="fr">{{item.goods_name}}<i class="right"></i></span></p>
 			</div>
 			<div class="quantity">
-				<p>每日配送瓶数<span class="fr">5</span></p>
+				<p>每日配送瓶数<span class="fr">{{item.quantity}}</span></p>
 			</div>
 		</div>
-		<div class="add_more">
+		<div class="add_more" @mousedown="addgoods">
 			<p><i class="plus"></i>添加商品</p>
 		</div>
-		<div class="created">
+		<div class="confirm">
 			<p>创建订单</p>
 		</div>
 	</div>
@@ -59,5 +59,7 @@
 		document.body.addEventListener('touchstart', function () {  
         });
 	</script>
+	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
