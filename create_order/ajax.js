@@ -1,4 +1,4 @@
-// ajax.js
+// 老土版本无效ajax.js
 window.onload = function () {
 	var ad = document.getElementsByClassName('ad');
 	var since = document.getElementsByClassName('since');

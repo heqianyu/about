@@ -3,9 +3,9 @@ var vm = new Vue({
 	el: '#wrap',
 	data: {
 		guest:{
-			name: '林叶',
-			tel: '13255452123',
-			address: '高新南环路29号留学生创业大厦2201',
+			name: '何乾宇',
+			tel: '18559867710',
+			address: '高新南环路XX号XXX大厦-2楼停车场',
 			since: '',
 			circle: '',
 			time: '',
